@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Розпізнавання літер</title>
+    <script src="./lib/sketchpad.js?v1.1"></script>
+    <script src="./dist/build.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        display: flex;
+        align-items: flex-start;
+      }
+      .sketchpad {
+        border: 3px solid darkslateblue;
+        border-radius: 5px;
+        margin: 0 5px 10px 0;
+      }
+      .thumbnail {
+        border: 1px solid darkslateblue;
+        border-radius: 2px;
+      }
+      .result {
+        font-size: 50px;
+        width: 200px;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+      }
+      .result:not(:empty) {
+        border: 5px solid darkslateblue;
+        border-radius: 5px;
+        margin-left: 10px;
+      }
+      button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        padding: 0 15px;
+        background-color: #1f6ec6;
+        border-radius: 4px;
+        font-weight: 400;
+        font-size: 16px;
+        color: #fff;
+        border: 1px solid transparent;
+        transition-duration: 0.3s;
+        position: relative;
+        cursor: pointer;
+      }
+      button.secondary {
+        background-color: transparent;
+        border-color: #1f6ec6;
+        color: #1f6ec6;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Розпізнавання цифр</h1>
+    <p>Намалюйте цифру та натисність кнопку "Розпізнати"</p>
+
+    <div class="container">
+      <canvas id="sketchpad" class="sketchpad" width="300" height="250"
+        >Sorry, your browser is not supported.</canvas
+      >
+      <canvas id="thumbnail" class="thumbnail" width="35" height="35"
+        >Sorry, your browser is not supported.</canvas
+      >
+      <div id="result" class="result"></div>
+    </div>
+    <button class="secondary" type="button" id="sketchClearButton">
+      Очистити
+    </button>
+    <button type="button" id="sketchRecogniseButton">Розпізнати</button>
+  </body>
+</html>

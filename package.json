@@ -1,0 +1,19 @@
+{
+  "name": "number_recognizer",
+  "version": "1.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "AnastasiiaIlina",
+  "license": "MIT",
+  "dependencies": {
+    "brain.js": "^0.7.0",
+    "mnist": "git+https://github.com/ApelSYN/mnist.git"
+  },
+  "devDependencies": {
+    "webpack": "*",
+    "json-loader": "^0.5.4"
+  }
+}
